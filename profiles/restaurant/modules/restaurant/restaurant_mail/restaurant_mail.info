@@ -1,0 +1,7 @@
+name = Restaurant Mail
+description = Handles emails for the Restaurant Distribution.
+core = 7.x
+package = Open Restaurant Core
+version = 7.x-1.0
+project = restaurant_mail
+features[features_api][] = api:2
