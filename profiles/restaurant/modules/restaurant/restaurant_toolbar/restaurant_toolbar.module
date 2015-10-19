@@ -129,6 +129,9 @@ function restaurant_toolbar_page_build(&$page) {
     'css' => array(
       $module_path . '/assets/stylesheets/restaurant_toolbar.css',
     ),
+    'js' => array(
+      $module_path . '/assets/javascripts/restaurant_toolbar.js' => array()
+    ),
   );
 }
 
