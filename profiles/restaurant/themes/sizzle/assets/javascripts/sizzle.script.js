@@ -31,30 +31,30 @@
         $(window).resize(function() {
           setStickyNavigation();
         });
-
-        function setStickyNavigation() {
-          if (!isBreakpoint('xs') && !$('.view-menu-categories').hasClass('waypoint-processed')) {
-            // Make navigation sticky.
-            var stickyNavigation = new Waypoint.Sticky({
-              element: $('.view-menu-categories', context)[0]
-            });
-
-            // Make category active when scrolled to.
-            $('.view--menus--all-menus [data-menu-category]').waypoint({
-              handler: function (direction) {
-                var el = $(this.element);
-                var category = el.data().menuCategory;
-                $('[data-menu-category="' + category + '"]')
-                  .addClass('active')
-                  .siblings().removeClass('active');
-              },
-              offset: '10%'
-            });
-
-            $('.view-menu-categories').addClass('waypoint-processed');
-          }
-        }
       }
+    }
+  }
+
+  function setStickyNavigation() {
+    if (!isBreakpoint('xs') && !$('.view-menu-categories').hasClass('waypoint-processed')) {
+      // Make navigation sticky.
+      var stickyNavigation = new Waypoint.Sticky({
+        element: $('.view-menu-categories')[0]
+      });
+
+      // Make category active when scrolled to.
+      $('.view--menus--all-menus [data-menu-category]').waypoint({
+        handler: function (direction) {
+          var el = $(this.element);
+          var category = el.data().menuCategory;
+          $('[data-menu-category="' + category + '"]')
+            .addClass('active')
+            .siblings().removeClass('active');
+        },
+        offset: '10%'
+      });
+
+      $('.view-menu-categories').addClass('waypoint-processed');
     }
   }
 

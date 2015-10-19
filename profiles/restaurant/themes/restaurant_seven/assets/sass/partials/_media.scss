@@ -125,6 +125,7 @@ ul.media-list-thumbnails li {
     padding: 20px 0 0;
     min-height: 0;
     @include border-radius(0);
+    @include clearfix();
     .container {
       margin: 0;
       padding: 0 20px;
@@ -174,26 +175,17 @@ ul.media-list-thumbnails li {
       }
     }
   }
-  input.form-submit, a.button {
-    //font-size: 14px;
-    //color: $link-color;
-    //border: 1px solid darken($border-color, 20);
-    //height: 40px;
-    //padding: 8px 16px;
-    //margin: 0 1em 0 0;
-    //display: inline-block;
-    //@include border-radius(2px);
-    //@include background-image(linear-gradient(lighten($border-color, 10), lighten($border-color, 5)));
-    //@include hover() {
-    //  color: white;
-    //  outline: none;
-    //  @include background-image(linear-gradient(darken($border-color, 45), darken($border-color, 50)));
-    //}
-    //&:active {
-    //  color: $link-color !important;
-    //  outline: none;
-    //  text-shadow: none;
-    //  @include background-image(linear-gradient(lighten($border-color, 5), lighten($border-color, 15)));
-    //}
+}
+.media-wrapper {
+  .ui-dialog-titlebar {
+    button.ui-dialog-titlebar-close {
+      background: url('../images/icon/icon-close-popup.png') no-repeat left top;
+      top: 10px;
+      outline: none;
+      text-indent: -9999px;
+      span {
+        display: none;
+      }
+    }
   }
 }

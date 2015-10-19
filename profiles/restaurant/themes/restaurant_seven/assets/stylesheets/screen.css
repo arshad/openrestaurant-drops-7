@@ -625,6 +625,8 @@ ul.media-list-thumbnails li .form-type-checkbox {
   padding: 20px 0 0;
   min-height: 0;
   border-radius: 0;
+  overflow: hidden;
+  *zoom: 1;
 }
 #media-browser-tabset #header .container {
   margin: 0;
@@ -671,6 +673,16 @@ ul.media-list-thumbnails li .form-type-checkbox {
   border: 1px solid #34495e;
 }
 
+.media-wrapper .ui-dialog-titlebar button.ui-dialog-titlebar-close {
+  background: url("../images/icon/icon-close-popup.png") no-repeat left top;
+  top: 10px;
+  outline: none;
+  text-indent: -9999px;
+}
+.media-wrapper .ui-dialog-titlebar button.ui-dialog-titlebar-close span {
+  display: none;
+}
+
 #modalBackdrop {
   background: rgba(0, 0, 0, 0.7) !important;
   z-index: 1002 !important;
@@ -706,6 +718,10 @@ ul.media-list-thumbnails li .form-type-checkbox {
   padding: 20px;
   background: white;
   border-radius: 0 0 2px 2px;
+}
+
+div.ui-dialog {
+  top: 70px !important;
 }
 
 .reservation .field-label {
@@ -965,6 +981,10 @@ ul.action-links li a:hover, ul.action-links li a:focus {
 .views-exposed-form .views-reset-button {
   margin-top: 35px;
   padding: 0;
+}
+
+.vbo-select-all-markup {
+  margin-bottom: 18px;
 }
 
 #edit-options .collapsible {

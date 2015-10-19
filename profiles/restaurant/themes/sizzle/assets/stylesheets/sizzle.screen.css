@@ -11460,6 +11460,9 @@ body.maintenance-page .form-actions {
 .node--menu--view-mode--full .menu__title {
   font-size: 30px;
 }
+.node--menu--view-mode--full .menu__image {
+  position: relative;
+}
 .node--menu--view-mode--stacked .ribbon {
   left: -15px;
 }
@@ -12061,6 +12064,11 @@ body {
   margin: 0 0 30px;
 }
 
+.alert.alert-success {
+  background: #796b4f;
+  color: #d5cebf;
+}
+
 .node {
   position: relative;
 }
@@ -12076,9 +12084,9 @@ body {
   margin-left: 10px;
 }
 .page-tabs ul.nav-tabs li a {
-  color: #796b4f;
+  background-color: #796b4f;
+  color: #d5cebf;
   border: 1px solid #796b4f;
-  width: auto;
   min-width: 0;
   padding: 5px 8px;
   font-size: 0.85em;
@@ -12088,10 +12096,10 @@ body {
   border-radius: 2px;
 }
 .page-tabs ul.nav-tabs li.active a {
-  border: 0;
   background: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  color: #796b4f;
 }
 .page-tabs ul.nav-tabs li.active a:hover {
   background: none;

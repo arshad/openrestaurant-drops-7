@@ -154,6 +154,16 @@ function restaurant_menu_permission() {
 }
 
 /**
+ * Implements hook_node_insert().
+ */
+function restaurant_menu_node_insert($node) {
+  if ($node->type == 'menu') {
+    // Add the menu to the menus_page queue.
+    _restaurant_menu_add_menu_to_queue($node, 'menus_page');
+  }
+}
+
+/**
  * Implements hook_preprocess().
  */
 function restaurant_menu_preprocess_views_view_table(&$variables) {
@@ -203,6 +213,17 @@ function restaurant_menu_form_views_exposed_form_alter(&$form, $form_state, $for
 }
 
 /**
+ * Helper function to add a menu to the menu entity queue.
+ *
+ * @param $menu
+ *  The menu object.
+ */
+function _restaurant_menu_add_menu_to_queue($menu, $queue_name) {
+  $queue = entityqueue_queue_load($queue_name);
+  return auto_entityqueue_add_entity_to_queue($menu, $queue);
+}
+
+/**
  * Generates an SKU.
  * This is used temporarily until the online ordering system is built.
  */
@@ -229,4 +250,3 @@ function restaurant_location_get_menus() {
     ->execute()
     ->fetchCol(0);
 }
-
