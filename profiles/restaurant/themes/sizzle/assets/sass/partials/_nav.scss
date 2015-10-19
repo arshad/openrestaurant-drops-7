@@ -215,6 +215,7 @@ ul.footer-nav {
       float: none;
       border-bottom: 1px solid $brand-primary;
       @include bp(sm) {
+        border: 0;
         border-right: 1px solid $brand-primary;
         float: left;
       }

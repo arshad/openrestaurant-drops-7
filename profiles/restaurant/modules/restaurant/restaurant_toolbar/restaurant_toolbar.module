@@ -124,15 +124,17 @@ function restaurant_toolbar_navbar_alter(&$items) {
  * Implements hook_page_build().
  */
 function restaurant_toolbar_page_build(&$page) {
-  $module_path = drupal_get_path('module', 'restaurant_toolbar');
-  $page['page_bottom']['#attached'] = array(
-    'css' => array(
-      $module_path . '/assets/stylesheets/restaurant_toolbar.css',
-    ),
-    'js' => array(
-      $module_path . '/assets/javascripts/restaurant_toolbar.js' => array()
-    ),
-  );
+  if (user_access('access navbar')) {
+    $module_path = drupal_get_path('module', 'restaurant_toolbar');
+    $page['page_bottom']['#attached'] = array(
+      'css' => array(
+        $module_path . '/assets/stylesheets/restaurant_toolbar.css',
+      ),
+      'js' => array(
+        $module_path . '/assets/javascripts/restaurant_toolbar.js' => array()
+      ),
+    );
+  }
 }
 
 /**

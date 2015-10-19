@@ -10725,7 +10725,7 @@ fieldset .panel-body {
 }
 
 html.js input.form-autocomplete {
-  background: url('../images/throbber.gif?1432540434') no-repeat right 8px #fff !important;
+  background: url('../images/throbber.gif?1445201816') no-repeat right 8px #fff !important;
 }
 html.js input.throbbing {
   background-position: right -122px !important;
@@ -11601,7 +11601,7 @@ body.maintenance-page .form-actions {
 .navbar.navbar-default {
   border-width: 2px 0;
   margin: 0;
-  background: #222222 url('../images/bg/bg-body.jpg?1432540434') repeat center;
+  background: #222222 url('../images/bg/bg-body.jpg?1445201816') repeat center;
 }
 .navbar.navbar-default.stuck {
   position: fixed;
@@ -11795,6 +11795,7 @@ ul.footer-nav > li ul.dropdown-menu li a:hover, ul.footer-nav > li ul.dropdown-m
 }
 @media (min-width: 768px) {
   .nav-tabs li, .nav--tabs li {
+    border: 0;
     border-right: 1px solid #796b4f;
     float: left;
   }
@@ -11837,7 +11838,7 @@ body {
 
 .page {
   margin: 0 auto;
-  background: #222222 url('../images/bg/bg-body.jpg?1432540434') repeat center;
+  background: #222222 url('../images/bg/bg-body.jpg?1445201816') repeat center;
 }
 .boxed .page {
   max-width: 1200px;
@@ -12108,7 +12109,7 @@ body {
 
 @media (min-width: 992px) {
   .front .view {
-    background: url('../images/bg/bg-separator-shadow.png?1432577548') no-repeat top center;
+    background: url('../images/bg/bg-separator-shadow.png?1445201816') no-repeat top center;
     padding-top: 100px;
   }
 }
