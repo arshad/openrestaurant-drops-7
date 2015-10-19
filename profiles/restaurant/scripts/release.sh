@@ -27,8 +27,9 @@ do
   if [[ $current_tag =~ ^[78]+\.x\-[0-9]+\.[0-9]+ ]] ; then
     # Create release notes using current tag.
     echo "Creating CHANGELOG.txt for $module..."
-    git push github --tags
-    git push drupal --tags
+    drush rn $current_tag 7.x-1.x > CHANGELOG.txt
+#    git push github --tags
+#    git push drupal --tags
   else
     # If no tag is found then we have not created a tag yet i.e first release.
     # Create the tag and push it.
@@ -57,8 +58,7 @@ do
   if [[ $current_tag =~ ^[78]+\.x\-[0-9]+\.[0-9]+ ]] ; then
     # Create release notes using current tag.
     echo "Creating CHANGELOG.txt for $theme..."
-    git push github --tags
-    git push drupal --tags
+    drush rn $current_tag 7.x-1.x > CHANGELOG.txt
   else
     # If no tag is found then we have not created a tag yet i.e first release.
     # Create the tag and push it.
@@ -70,12 +70,3 @@ do
     git push drupal --tags
   fi
 done
-
-# Create release for profile
-echo ""
-echo ""
-echo "----------------------------------"
-echo "Profile: Restaurant"
-echo "----------------------------------"
-cd $TARGET
-

@@ -13,6 +13,7 @@ var livereload = require('gulp-livereload');
 var shell = require('gulp-shell');
 var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
+var autoprefixer = require('gulp-autoprefixer');
 
 // Compress images
 gulp.task('images', function () {
@@ -49,6 +50,7 @@ gulp.task('sass', function() {
       sass: 'assets/sass',
       bundle_exec: true
     }))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('assets/stylesheets'));
 });
 

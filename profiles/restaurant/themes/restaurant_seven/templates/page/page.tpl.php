@@ -5,7 +5,7 @@
  */
 ?>
 <div id="page" class="container">
-  <div id="header">
+  <div id="header" class="clearfix">
     <?php print $breadcrumb; ?>
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>

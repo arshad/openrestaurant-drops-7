@@ -31,8 +31,8 @@ gulp.task('sass', function() {
         console.log(error.message);
         this.emit('end');
       }}))
-    .pipe(sass())
     .pipe(sourcemaps.init())
+    .pipe(sass())
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/stylesheets'));
