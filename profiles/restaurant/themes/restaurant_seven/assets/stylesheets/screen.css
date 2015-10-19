@@ -383,6 +383,13 @@ div.horizontal-tabs ul.horizontal-tabs-list li.selected {
   display: none;
 }
 
+.fieldset-wrapper > .form-wrapper {
+  margin-bottom: 18px;
+}
+.fieldset-wrapper > .form-wrapper:last-child {
+  margin-bottom: 0;
+}
+
 .image-style-new .form-item, .image-style-new input {
   display: inline-block;
 }

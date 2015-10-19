@@ -329,7 +329,14 @@ div.horizontal-tabs {
     }
   }
 }
-
+.fieldset-wrapper {
+  > .form-wrapper {
+    margin-bottom: 18px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 // Image style form.
 // -----------------------------------------------------------------------------
 .image-style-new {
