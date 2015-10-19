@@ -30,7 +30,14 @@ body.panels-ipe {
   margin-bottom: 55px !important;
 }
 div#panels-ipe-control-container {
-  background: rgba(black, 0.2);
+  background: none;
+  top: 50px;
+  bottom: auto;
+  .panels-ipe-button-container,
+  .panels-ipe-form-container {
+    float: right;
+    padding: 0;
+  }
 }
 div.panels-ipe-placeholder {
   background-color: rgba($brand-secondary, 0.5);

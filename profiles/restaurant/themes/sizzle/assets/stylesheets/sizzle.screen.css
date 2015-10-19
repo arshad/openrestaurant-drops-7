@@ -11039,7 +11039,14 @@ body.panels-ipe {
 }
 
 div#panels-ipe-control-container {
-  background: rgba(0, 0, 0, 0.2);
+  background: none;
+  top: 50px;
+  bottom: auto;
+}
+div#panels-ipe-control-container .panels-ipe-button-container,
+div#panels-ipe-control-container .panels-ipe-form-container {
+  float: right;
+  padding: 0;
 }
 
 div.panels-ipe-placeholder {
