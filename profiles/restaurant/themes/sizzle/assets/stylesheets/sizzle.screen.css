@@ -11035,13 +11035,15 @@ ul.contextual-links > li > a:hover, ul.contextual-links > li > a:focus {
 }
 
 body.panels-ipe {
-  margin-bottom: 55px !important;
+  margin-bottom: 0px !important;
 }
 
 div#panels-ipe-control-container {
   background: none;
-  top: 50px;
+  top: 52px;
+  left: auto;
   bottom: auto;
+  float: right;
 }
 div#panels-ipe-control-container .panels-ipe-button-container,
 div#panels-ipe-control-container .panels-ipe-form-container {
@@ -12127,6 +12129,16 @@ body {
     background: url('../images/bg/bg-separator-shadow.png?1445201816') no-repeat top center;
     padding-top: 100px;
   }
+}
+.front .view__header h1 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.front .view__header p.lead, .front .view__header .lead.text, .front .view__header .lead.text--normal {
+  text-transform: uppercase;
+  color: #f26838;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .views-exposed-form .views-exposed-form__widget {

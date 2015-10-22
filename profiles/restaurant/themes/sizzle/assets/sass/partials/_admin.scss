@@ -27,12 +27,14 @@ ul.contextual-links {
 // Panels IPE.
 // -----------------------------------------------------------------------------
 body.panels-ipe {
-  margin-bottom: 55px !important;
+  margin-bottom: 0px !important;
 }
 div#panels-ipe-control-container {
   background: none;
-  top: 50px;
+  top: 52px;
+  left: auto;
   bottom: auto;
+  float: right;
   .panels-ipe-button-container,
   .panels-ipe-form-container {
     float: right;

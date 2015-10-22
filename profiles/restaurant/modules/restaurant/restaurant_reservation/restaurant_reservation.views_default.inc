@@ -321,6 +321,22 @@ function restaurant_reservation_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Reservation: Party size */
+  $handler->display->display_options['fields']['field_reservation_party_size']['id'] = 'field_reservation_party_size';
+  $handler->display->display_options['fields']['field_reservation_party_size']['table'] = 'field_data_field_reservation_party_size';
+  $handler->display->display_options['fields']['field_reservation_party_size']['field'] = 'field_reservation_party_size';
+  $handler->display->display_options['fields']['field_reservation_party_size']['label'] = '';
+  $handler->display->display_options['fields']['field_reservation_party_size']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_reservation_party_size']['alter']['text'] = '([field_reservation_party_size])';
+  $handler->display->display_options['fields']['field_reservation_party_size']['element_type'] = 'h6';
+  $handler->display->display_options['fields']['field_reservation_party_size']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_reservation_party_size']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_reservation_party_size']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_reservation_party_size']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_reservation_party_size']['field_api_classes'] = TRUE;
   /* Field: Reservation: Id */
   $handler->display->display_options['fields']['id']['id'] = 'id';
   $handler->display->display_options['fields']['id']['table'] = 'eck_reservation';
@@ -344,6 +360,17 @@ function restaurant_reservation_views_default_views() {
   $handler->display->display_options['fields']['field_reservation_number']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_reservation_number']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_reservation_number']['field_api_classes'] = TRUE;
+  /* Field: Reservation: Name */
+  $handler->display->display_options['fields']['field_reservation_name']['id'] = 'field_reservation_name';
+  $handler->display->display_options['fields']['field_reservation_name']['table'] = 'field_data_field_reservation_name';
+  $handler->display->display_options['fields']['field_reservation_name']['field'] = 'field_reservation_name';
+  $handler->display->display_options['fields']['field_reservation_name']['label'] = '';
+  $handler->display->display_options['fields']['field_reservation_name']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['field_reservation_name']['element_type'] = 'h4';
+  $handler->display->display_options['fields']['field_reservation_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_reservation_name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_reservation_name']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_reservation_name']['field_api_classes'] = TRUE;
   /* Field: Reservation: Status */
   $handler->display->display_options['fields']['field_reservation_status']['id'] = 'field_reservation_status';
   $handler->display->display_options['fields']['field_reservation_status']['table'] = 'field_data_field_reservation_status';

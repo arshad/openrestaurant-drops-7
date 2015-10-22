@@ -775,18 +775,27 @@ div.ui-dialog {
 .view-item-administration_reservations .calendar.monthview {
   background: none !important;
   border: 1px solid #cee3f0;
-  padding: 5px;
+  padding: 5px 5px 25px 5px !important;
   position: relative;
-  border-radius: 2px;
+  border-radius: 0;
+}
+.view-item-administration_reservations .calendar.monthview h6 {
+  float: right;
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.view-item-administration_reservations .calendar.monthview h4 {
+  margin: 0;
+  font-weight: 600;
 }
 .view-item-administration_reservations .calendar.monthview .reservation-label {
   position: absolute;
-  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
   display: block;
   line-height: 18px;
-  width: 70px;
   border-radius: 0;
 }
 
