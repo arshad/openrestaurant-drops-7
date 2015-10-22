@@ -2,13 +2,13 @@
 
 /**
  * @file
- * Installation file for Restaurant Event
+ * Installation file for Restaurant Location
  */
 
 /**
  * Implements hook_install().
  */
-function restaurant_event_install() {
+function restaurant_location_install() {
   $t = get_t();
 
   // Add Shortcuts.
@@ -16,14 +16,9 @@ function restaurant_event_install() {
     $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
     $shortcut_set->links = array(
       array(
-        'link_path' => 'node/add/event',
-        'link_title' => $t('Add event'),
+        'link_path' => 'node/add/location',
+        'link_title' => $t('Add location'),
         'weight' => 30,
-      ),
-      array(
-        'link_path' => 'admin/events/categories/add',
-        'link_title' => $t('Add event category'),
-        'weight' => 31,
       ),
     );
     shortcut_set_save($shortcut_set);
