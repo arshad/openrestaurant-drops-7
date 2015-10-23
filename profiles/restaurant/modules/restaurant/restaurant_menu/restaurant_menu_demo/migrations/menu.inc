@@ -11,8 +11,8 @@ class RestaurantMenuMigrateMenuMigration extends Migration {
     parent::__construct();
     $this->data = drupal_get_path('module', 'restaurant_menu_demo') . '/data/menus.csv';
 
-    // Set the sample size to fewer if max_execution_time is less than 60.
-    if (ini_get('max_execution_time') < 60) {
+    // Set the sample size to fewer if max_execution_time is less than 60 or on Pantheon.
+    if (ini_get('max_execution_time') < 60 || defined('PANTHEON_ENVIRONMENT')) {
       $this->data = drupal_get_path('module', 'restaurant_menu_demo') . '/data/menus-few.csv';
     }
 
