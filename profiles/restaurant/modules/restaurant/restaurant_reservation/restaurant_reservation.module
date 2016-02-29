@@ -260,6 +260,7 @@ function restaurant_reservation_entity_update($entity, $type) {
  * Sends an email for a reservation status change.
  */
 function restaurant_reservation_send_update_status_mail($reservation) {
+  global $language;
   $wrapper = entity_metadata_wrapper('reservation', $reservation);
   $current_status = $wrapper->field_reservation_status->value();
 
@@ -277,7 +278,8 @@ function restaurant_reservation_send_update_status_mail($reservation) {
 
     // For now, let's just attach the node display to the body.
     // TODO: Tokenize this. Add HTML support.
-    $params['body'] .= drupal_render(entity_view('reservation', array($reservation), 'email'));
+    $body = entity_view('reservation', array($reservation), 'email', $language->language);
+    $params['body'] .= drupal_render($body);
 
     $to = $wrapper->field_reservation_email->value();
     $lang = language_default();
@@ -344,8 +346,15 @@ function computed_field_field_reservation_number_compute(&$entity_field, $entity
     return $entity_field[0]['value'];
   }
 
-  // Generate a unique id using the id.
+  // Get the reservation id.
   $reservation_id = entity_id($entity_type, $entity);
+
+  // Use the id if reservation number is not used.
+  if (!panopoly_config_get('reservation_use_reservation_number')) {
+    return $reservation_id;
+  }
+
+  // Generate a unique id using the id.
   $reservation_number = _restaurant_reservation_generate_reservation_number_from_id($reservation_id);
 
   $entity_field[0]['value'] = $reservation_number;
@@ -464,4 +473,39 @@ function _restaurant_reservation_reservation_number_exists($reservation_number) 
     ->fetchField();
 
   return (!empty($reservation_number)) ? TRUE : FALSE;
+}
+
+/**
+ * Implements hook_migrate_api().
+ */
+function restaurant_reservation_migrate_api() {
+  return array(
+    'api' => 2,
+    'groups' => array(
+      'restaurant_reservation_demo' => array(
+        'title' => t('Restaurant reservation demo content'),
+      ),
+    ),
+    'migrations' => restaurant_reservation_demo_get_migrations(),
+  );
+}
+
+/**
+ * Returns an array of migrations.
+ */
+function restaurant_reservation_demo_get_migrations() {
+  return array(
+    'RestaurantReservationDemoMigrateSlideshowMigration' => array(
+      'class_name' => 'RestaurantReservationDemoMigrateSlideshowMigration',
+      'group_name' => 'restaurant_reservation_demo',
+    ),
+    'RestaurantReservationDemoMigrateSlideMigration' => array(
+      'class_name' => 'RestaurantReservationDemoMigrateSlideMigration',
+      'group_name' => 'restaurant_reservation_demo',
+    ),
+    'RestaurantReservationDemoMigrateTextMigration' => array(
+      'class_name' => 'RestaurantReservationDemoMigrateTextMigration',
+      'group_name' => 'restaurant_reservation_demo',
+    ),
+  );
 }

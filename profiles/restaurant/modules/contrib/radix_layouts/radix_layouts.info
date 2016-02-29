@@ -4,3 +4,8 @@ core = 7.x
 
 dependencies[] = panels
 stylesheets[all][] = radix_layouts.css
+
+; Information added by drush on 2015-06-02
+version = "7.x-3.4+0-dev"
+project = "radix_layouts"
+datestamp = "1433259449"

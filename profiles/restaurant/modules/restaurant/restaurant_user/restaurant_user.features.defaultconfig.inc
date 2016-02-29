@@ -73,8 +73,6 @@ function restaurant_user_defaultconfig_field_default_fields() {
       'label' => 'About',
       'required' => 0,
       'settings' => array(
-        'custom_add_another' => '',
-        'custom_remove' => '',
         'display_summary' => 0,
         'text_processing' => 1,
         'user_register_form' => 0,
@@ -150,8 +148,6 @@ function restaurant_user_defaultconfig_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
-        'custom_add_another' => '',
-        'custom_remove' => '',
         'default_image' => 0,
         'file_directory' => 'pictures',
         'file_extensions' => 'png gif jpg jpeg',

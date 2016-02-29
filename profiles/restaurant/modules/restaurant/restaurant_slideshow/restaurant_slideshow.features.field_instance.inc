@@ -10,8 +10,7 @@
 function restaurant_slideshow_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance:
-  // 'field_collection_item-field_slideshow_slides-field_slideshow_caption'
+  // Exported field_instance: 'field_collection_item-field_slideshow_slides-field_slideshow_caption'
   $field_instances['field_collection_item-field_slideshow_slides-field_slideshow_caption'] = array(
     'bundle' => 'field_slideshow_slides',
     'default_value' => NULL,
@@ -19,7 +18,7 @@ function restaurant_slideshow_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -27,17 +26,13 @@ function restaurant_slideshow_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_slideshow_caption',
     'label' => 'Caption',
     'required' => 0,
     'settings' => array(
-      'custom_add_another' => '',
-      'custom_remove' => '',
       'linkit' => array(
-        'button_text' => 'Search',
         'enable' => 0,
-        'profile' => '',
+        'insert_plugin' => '',
       ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -53,15 +48,14 @@ function restaurant_slideshow_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'field_collection_item-field_slideshow_slides-field_slideshow_image'
+  // Exported field_instance: 'field_collection_item-field_slideshow_slides-field_slideshow_image'
   $field_instances['field_collection_item-field_slideshow_slides-field_slideshow_image'] = array(
     'bundle' => 'field_slideshow_slides',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
@@ -72,14 +66,11 @@ function restaurant_slideshow_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_slideshow_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
-      'custom_add_another' => '',
-      'custom_remove' => '',
       'default_image' => 0,
       'file_directory' => 'slideshows',
       'file_extensions' => 'png gif jpg jpeg',
@@ -109,28 +100,15 @@ function restaurant_slideshow_field_default_field_instances() {
           'media_default--media_browser_my_files' => 0,
           'media_internet' => 0,
           'upload' => 0,
-          'youtube' => 0,
         ),
-        'manualcrop_crop_info' => 1,
-        'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 0,
-        'manualcrop_inline_crop' => 0,
-        'manualcrop_instant_crop' => FALSE,
-        'manualcrop_instant_preview' => 1,
-        'manualcrop_keyboard' => 1,
-        'manualcrop_maximize_default_crop_area' => 0,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
-        'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => 0,
+        'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
       'weight' => 0,
     ),
   );
 
-  // Exported field_instance:
-  // 'field_collection_item-field_slideshow_slides-field_slideshow_link'
+  // Exported field_instance: 'field_collection_item-field_slideshow_slides-field_slideshow_link'
   $field_instances['field_collection_item-field_slideshow_slides-field_slideshow_link'] = array(
     'bundle' => 'field_slideshow_slides',
     'default_value' => NULL,
@@ -138,7 +116,7 @@ function restaurant_slideshow_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -146,34 +124,26 @@ function restaurant_slideshow_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_slideshow_link',
     'label' => 'Link',
     'required' => 0,
     'settings' => array(
-      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
-        'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
         'title' => '',
       ),
-      'custom_add_another' => '',
-      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
       'linkit' => array(
-        'button_text' => 'Search',
         'enable' => 0,
-        'profile' => '',
+        'insert_plugin' => '',
       ),
-      'rel_remove' => 'default',
       'title' => 'none',
-      'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -189,8 +159,7 @@ function restaurant_slideshow_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'fieldable_panels_pane-slideshow-field_slideshow_slides'
+  // Exported field_instance: 'fieldable_panels_pane-slideshow-field_slideshow_slides'
   $field_instances['fieldable_panels_pane-slideshow-field_slideshow_slides'] = array(
     'bundle' => 'slideshow',
     'default_value' => NULL,
@@ -220,7 +189,7 @@ function restaurant_slideshow_field_default_field_instances() {
           'slideshow_controls_position' => 'after',
           'slideshow_field_collection_image' => 'field_slideshow_image',
           'slideshow_fx' => 'slideX',
-          'slideshow_image_style' => '',
+          'slideshow_image_style' => 'slideshow_full',
           'slideshow_link' => 'field_slideshow_link',
           'slideshow_order' => '',
           'slideshow_pager' => 'number',
@@ -236,13 +205,10 @@ function restaurant_slideshow_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'fieldable_panels_pane',
-    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_slideshow_slides',
     'label' => 'Slides',
     'required' => 1,
     'settings' => array(
-      'custom_add_another' => '',
-      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(

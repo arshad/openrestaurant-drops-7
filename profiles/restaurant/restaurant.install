@@ -4,17 +4,19 @@
 include_once 'includes/quick.inc';
 include_once 'includes/standard.inc';
 
+// Distribution name.
 define('DISTRIBUTION_NAME', 'Open Restaurant');
 
+// Distribution slogan.
 define('DISTRIBUTION_SLOGAN', 'Open Source Restaurant Software');
 
 // Installation theme
-define('INSTALL_THEME', 'radix');
+define('INSTALL_THEME', 'seven');
 
-// Default theme
+// Default theme.
 define('DEFAULT_THEME', 'sizzle');
 
-// Default Administration theme
+// Default Administration theme.
 define('DEFAULT_ADMINISTRATION_THEME', 'restaurant_seven');
 
 /**
@@ -22,6 +24,9 @@ define('DEFAULT_ADMINISTRATION_THEME', 'restaurant_seven');
  */
 function restaurant_install_tasks($install_state) {
   $tasks = array();
+
+  // Add our custom CSS file for the installation process
+  drupal_add_css(drupal_get_path('profile', 'restaurant') . '/restaurant.css');
 
   // Set the page title.
   drupal_set_title(DISTRIBUTION_NAME);
@@ -163,7 +168,7 @@ function restaurant_install_welcome_submit($form, &$form_state) {
 function restaurant_select_installation_type($form, &$form_state) {
   // Add installation types.
   $installation_types = _restaurant_get_installation_types();
-  $form_state['input']['installation_type'] = 'quick';
+  $form_state['input']['installation_type'] = 'standard';
   $form['installation_type'] = array(
     '#prefix' => '<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' . st('Select an installation type:') . '</h3></div><div class="panel-body">',
     '#suffix' => '</div></div>',
@@ -179,7 +184,7 @@ function restaurant_select_installation_type($form, &$form_state) {
       '#type' => 'radio',
       '#title' => $values['title'],
       '#description' => $values['description'],
-      '#value' => 'quick',
+      '#value' => 'standard',
       '#return_value' => $type,
       '#parents' => array('installation_type'),
     );
@@ -286,6 +291,9 @@ function restaurant_disable_unwanted_modules(&$context) {
   $context['message'] = st('Disabled some unsused modules.');
 }
 
+/**
+ * Rebuilds the theme registry.
+ */
 function restaurant_clear_theme_caches(&$context) {
   // Flush theme caches so things are right.
   system_rebuild_theme_data();
@@ -294,11 +302,17 @@ function restaurant_clear_theme_caches(&$context) {
   $context['message'] = st('Rebuilt the theme registry.');
 }
 
+/**
+ * Clears the watchdog logs.
+ */
 function restaurant_clear_logs(&$context) {
   db_delete('watchdog')->execute();
   $context['message'] = st('Cleared the report logs.');
 }
 
+/**
+ * Clears the site caches.
+ */
 function restaurant_clear_site_caches(&$context) {
   // Flush all caches to ensure that any full bootstraps during the installer
   // do not leave stale cached data, and that any content types or other items
@@ -401,13 +415,13 @@ function _restaurant_filter_dependencies($dependency) {
  */
 function _restaurant_get_installation_types() {
   return array(
-    'quick' => array(
-      'title' => st('Quick (recommended)'),
-      'description' => st('Install using a set of predefined settings.'),
-    ),
     'standard' => array(
       'title' => st('Standard'),
-      'description' => st('Install by customizing your distribution.'),
+      'description' => st('Install Open Restaurant by customizing your distribution.'),
+    ),
+    'quick' => array(
+      'title' => st('Demo'),
+      'description' => st('Install Open Restaurant with all features and demo content.'),
     ),
   );
 }

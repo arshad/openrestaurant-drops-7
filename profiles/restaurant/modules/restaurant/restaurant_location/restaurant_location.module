@@ -82,3 +82,42 @@ function restaurant_location_get_locations() {
     ->execute()
     ->fetchCol(0);
 }
+
+/**
+ * Implements hook_migrate_api().
+ */
+function restaurant_location_migrate_api() {
+  return array(
+    'api' => 2,
+    'groups' => array(
+      'restaurant_location_demo' => array(
+        'title' => t('Restaurant Location demo content'),
+      ),
+    ),
+    'migrations' => restaurant_location_get_migrations(),
+  );
+}
+
+/**
+ * Returns an array of migrations.
+ */
+function restaurant_location_get_migrations() {
+  return array(
+    'RestaurantLocationMigrateLocationMigration' => array(
+      'class_name' => 'RestaurantLocationMigrateLocationMigration',
+      'group_name' => 'restaurant_location_demo',
+    ),
+    'RestaurantLocationMigrateSlideshowMigration' => array(
+      'class_name' => 'RestaurantLocationMigrateSlideshowMigration',
+      'group_name' => 'restaurant_location_demo',
+    ),
+    'RestaurantLocationMigrateSlideMigration' => array(
+      'class_name' => 'RestaurantLocationMigrateSlideMigration',
+      'group_name' => 'restaurant_location_demo',
+    ),
+    'RestaurantLocationMigrateTextMigration' => array(
+      'class_name' => 'RestaurantLocationMigrateTextMigration',
+      'group_name' => 'restaurant_location_demo',
+    ),
+  );
+}

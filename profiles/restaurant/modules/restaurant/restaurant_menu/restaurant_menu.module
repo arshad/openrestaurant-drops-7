@@ -178,7 +178,7 @@ function restaurant_menu_preprocess_views_view_table(&$variables) {
  * Implements hook_form_FORM_ID_alter().
  */
 function restaurant_menu_form_menu_node_form_alter(&$form, &$form_state, $form_id) {
-  $language = $form['language']['#value'];
+  $language = isset($form['language']['#value']) ? $form['language']['#value'] : $form['#node']->language;
 
   // Hide locations field if restaurant_location module is disabled.
   if (!module_exists('restaurant_location')) {
@@ -249,4 +249,47 @@ function restaurant_location_get_menus() {
     ->fields('n', array('nid'))
     ->execute()
     ->fetchCol(0);
+}
+
+/**
+ * Implements hook_migrate_api().
+ */
+function restaurant_menu_migrate_api() {
+  return array(
+    'api' => 2,
+    'groups' => array(
+      'restaurant_menu_demo' => array(
+        'title' => t('Restaurant Menu demo content'),
+      ),
+    ),
+    'migrations' => restaurant_menu_get_migrations(),
+  );
+}
+
+/**
+ * Returns an array of migrations.
+ */
+function restaurant_menu_get_migrations() {
+  return array(
+    'RestaurantMenuMigrateSlideshowMigration' => array(
+      'class_name' => 'RestaurantMenuMigrateSlideshowMigration',
+      'group_name' => 'restaurant_menu_demo',
+    ),
+    'RestaurantMenuMigrateSlideMigration' => array(
+      'class_name' => 'RestaurantMenuMigrateSlideMigration',
+      'group_name' => 'restaurant_menu_demo',
+    ),
+    'RestaurantMenuMigrateCategoryMigration' => array(
+      'class_name' => 'RestaurantMenuMigrateCategoryMigration',
+      'group_name' => 'restaurant_menu_demo',
+    ),
+    'RestaurantMenuMigrateTypeMigration' => array(
+      'class_name' => 'RestaurantMenuMigrateTypeMigration',
+      'group_name' => 'restaurant_menu_demo',
+    ),
+    'RestaurantMenuMigrateMenuMigration' => array(
+      'class_name' => 'RestaurantMenuMigrateMenuMigration',
+      'group_name' => 'restaurant_menu_demo',
+    ),
+  );
 }

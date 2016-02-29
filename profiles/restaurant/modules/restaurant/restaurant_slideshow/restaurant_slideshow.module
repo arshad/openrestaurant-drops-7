@@ -10,6 +10,7 @@ include_once 'restaurant_slideshow.features.inc';
  * Implementation of hook_entity_info_alter()
  */
 function restaurant_slideshow_entity_info_alter(&$entity_info) {
+
   // Slideshow
   $entity_info['fieldable_panels_pane']['bundles']['slideshow'] = array(
     'label' => t('Slideshow'),
@@ -23,16 +24,5 @@ function restaurant_slideshow_entity_info_alter(&$entity_info) {
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
-}
 
-/**
- * Implements hook_preprocess().
- */
-function restaurant_slideshow_preprocess_field_slideshow(&$variables, $hook) {
-  // Make sure caption is filtered properly before rendering.
-  foreach (element_children($variables['items']) as $index) {
-    if (isset($variables['items'][$index]['caption'])) {
-      $variables['items'][$index]['caption'] = check_markup($variables['items'][$index]['caption'], 'panopoly_html_text');
-    }
-  }
 }

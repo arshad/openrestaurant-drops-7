@@ -3,134 +3,187 @@ core = 7.x
 
 ; The Panopoly Foundation
 
-projects[panopoly_core][version] = 1.27
-projects[panopoly_core][subdir] = panopoly
+projects[panopoly_core][version] = 1.31
+projects[panopoly_core][subdir] = contrib
 
-projects[panopoly_images][version] = 1.27
-projects[panopoly_images][subdir] = panopoly
+projects[panopoly_images][version] = 1.31
+projects[panopoly_images][subdir] = contrib
 
-projects[panopoly_theme][version] = 1.27
-projects[panopoly_theme][subdir] = panopoly
+projects[panopoly_theme][version] = 1.31
+projects[panopoly_theme][subdir] = contrib
+projects[panopoly_theme][patch][2672738] = https://www.drupal.org/files/issues/panopoly-theme-remove-responsive-bartik-2672738-1.patch
 
-projects[panopoly_magic][version] = 1.27
-projects[panopoly_magic][subdir] = panopoly
+projects[panopoly_magic][version] = 1.31
+projects[panopoly_magic][subdir] = contrib
 
-projects[panopoly_widgets][version] = 1.27
-projects[panopoly_widgets][subdir] = panopoly
+projects[panopoly_widgets][version] = 1.31
+projects[panopoly_widgets][subdir] = contrib
 
-projects[panopoly_admin][version] = 1.27
-projects[panopoly_admin][subdir] = panopoly
+projects[panopoly_admin][version] = 1.31
+projects[panopoly_admin][subdir] = contrib
 
-projects[panopoly_users][version] = 1.27
-projects[panopoly_users][subdir] = panopoly
+projects[panopoly_users][version] = 1.31
+projects[panopoly_users][subdir] = contrib
 
-; The Panopoly Toolset
+projects[panopoly_pages][version] = 1.31
+projects[panopoly_pages][subdir] = contrib
 
-projects[panopoly_pages][version] = 1.27
-projects[panopoly_pages][subdir] = panopoly
-
-projects[panopoly_wysiwyg][version] = 1.27
-projects[panopoly_wysiwyg][subdir] = panopoly
-
-; Panopoly Recommended
-
-projects[devel][version] = 1.5
-projects[devel][subdir] = contrib
+projects[panopoly_wysiwyg][version] = 1.31
+projects[panopoly_wysiwyg][subdir] = contrib
 
 ; Panopoly Other
 
 projects[panopoly_config][version] = 1.0
-projects[panopoly_config][subdir] = panopoly
+projects[panopoly_config][subdir] = contrib
 
 projects[panopoly_seo][version] = 1.0-beta1
-projects[panopoly_seo][subdir] = panopoly
+projects[panopoly_seo][subdir] = contrib
 
-; Restaurant
+; Open Restaurant Dependencies
 
-projects[restaurant_admin][version] = 1.0-rc2
-projects[restaurant_admin][type] = module
-projects[restaurant_admin][subdir] = restaurant
+projects[field_collection][version] = 1.0-beta8
+projects[field_collection][subdir] = contrib
 
-projects[restaurant_base][version] = 1.0-rc2
-projects[restaurant_base][type] = module
-projects[restaurant_base][subdir] = restaurant
+projects[navbar][version] = 1.x-dev
+projects[navbar][subdir] = contrib
+projects[navbar][download][type] = git
+projects[navbar][download][revision] = 455f81d
+projects[navbar][download][branch] = 7.x-1.x
+projects[navbar][patch][1757466] = http://drupal.org/files/navbar-conflict-1757466-14.patch
+projects[navbar][patch][2050559] = http://drupal.org/files/z-index-heart-cools-2050559-1.patch
+projects[navbar][patch][2595781] = https://www.drupal.org/files/issues/navbar-change-default-orientation-to-vertical-2595781-1.patch
 
-projects[restaurant_mail][version] = 1.0-rc2
-projects[restaurant_mail][type] = module
-projects[restaurant_mail][subdir] = restaurant
+projects[fences][version] = 1.2
+projects[fences][subdir] = contrib
 
-projects[restaurant_pages][version] = 1.0-rc2
-projects[restaurant_pages][type] = module
-projects[restaurant_pages][subdir] = restaurant
+projects[eck][version] = 2.0-rc7
+projects[eck][subdir] = contrib
 
-projects[restaurant_plugins][version] = 1.0-rc2
-projects[restaurant_plugins][type] = module
-projects[restaurant_plugins][subdir] = restaurant
+projects[variable][version] = 2.1
+projects[variable][subdir] = contrib
 
-projects[restaurant_theme][version] = 1.0-rc2
-projects[restaurant_theme][type] = module
-projects[restaurant_theme][subdir] = restaurant
+projects[migrate][version] = 2.5
+projects[migrate][subdir] = contrib
 
-projects[restaurant_toolbar][version] = 1.0-rc2
-projects[restaurant_toolbar][type] = module
-projects[restaurant_toolbar][subdir] = restaurant
+projects[migrate_extras][version] = 2.5
+projects[migrate_extras][subdir] = contrib
 
-projects[restaurant_user][version] = 1.0-rc2
-projects[restaurant_user][type] = module
-projects[restaurant_user][subdir] = restaurant
+projects[view_mode_templates][version] = 1.0
+projects[view_mode_templates][subdir] = contrib
 
-projects[restaurant_wysiwyg][version] = 1.0-rc2
-projects[restaurant_wysiwyg][type] = module
-projects[restaurant_wysiwyg][subdir] = restaurant
+projects[smart_trim][version] = 1.5
+projects[smart_trim][subdir] = contrib
 
-; Restaurant Apps
+projects[email][version] = 1.2
+projects[email][subdir] = contrib
 
-projects[restaurant_blog][version] = 1.0-rc2
-projects[restaurant_blog][type] = module
-projects[restaurant_blog][subdir] = restaurant
+projects[auto_nodetitle][version] = 1.0
+projects[auto_nodetitle][subdir] = contrib
 
-projects[restaurant_contact][version] = 1.0-rc2
-projects[restaurant_contact][type] = module
-projects[restaurant_contact][subdir] = restaurant
+projects[addressfield][version] = 1.0-beta5
+projects[addressfield][subdir] = contrib
 
-projects[restaurant_demo][version] = 1.0-rc2
-projects[restaurant_demo][type] = module
-projects[restaurant_demo][subdir] = restaurant
+projects[disqus][version] = 1.10
+projects[disqus][subdir] = contrib
 
-projects[restaurant_event][version] = 1.0-rc2
-projects[restaurant_event][type] = module
-projects[restaurant_event][subdir] = restaurant
+projects[better_exposed_filters][version] = 3.0-beta4
+projects[better_exposed_filters][subdir] = contrib
 
-projects[restaurant_location][version] = 1.0-rc2
-projects[restaurant_location][type] = module
-projects[restaurant_location][subdir] = restaurant
+projects[calendar][version] = 3.4
+projects[calendar][subdir] = contrib
+projects[calendar][patch][1471400] = https://www.drupal.org/files/issues/calendar-illegal_offset-1471400-78.patch
 
-projects[restaurant_menu][version] = 1.0-rc2
-projects[restaurant_menu][type] = module
-projects[restaurant_menu][subdir] = restaurant
+projects[entity][version] = 1.6
+projects[entity][subdir] = contrib
 
-projects[restaurant_reservation][version] = 1.0-rc2
-projects[restaurant_reservation][type] = module
-projects[restaurant_reservation][subdir] = restaurant
+projects[google_analytics][version] = 1.4
+projects[google_analytics][subdir] = contrib
 
-projects[restaurant_seo][version] = 1.0-rc2
-projects[restaurant_seo][type] = module
-projects[restaurant_seo][subdir] = restaurant
+projects[computed_field][version] = 1.0
+projects[computed_field][subdir] = contrib
 
-projects[restaurant_slideshow][version] = 1.0-rc2
-projects[restaurant_slideshow][type] = module
-projects[restaurant_slideshow][subdir] = restaurant
+projects[custom_add_another][version] = 1.0-rc3
+projects[custom_add_another][subdir] = contrib
 
-; Themes
+projects[better_exposed_filters][version] = 3.0-beta4
+projects[better_exposed_filters][subdir] = contrib
 
-projects[radix][version] = 3.0-rc4
+projects[features_override][version] = 2.0-rc2
+projects[features_override][subdir] = contrib
+
+projects[entity_view_mode][version] = 1.0-rc1
+projects[entity_view_mode][subdir] = contrib
+
+projects[smart_trim][version] = 1.5
+projects[smart_trim][subdir] = contrib
+
+projects[page_title][version] = 2.7
+projects[page_title][subdir] = contrib
+projects[page_title][patch][2516726] = https://www.drupal.org/files/issues/page_title-fixes_redeclaration_bug_on_repeated_includes-2516726-1.patch
+
+projects[eck][version] = 2.0-rc7
+projects[eck][subdir] = contrib
+
+projects[inline_entity_form][version] = 1.6
+projects[inline_entity_form][subdir] = contrib
+
+projects[commerce][version] = 1.11
+projects[commerce][subdir] = contrib
+projects[commerce][patch][2567833] = https://www.drupal.org/files/issues/commerce-fatal-error-commerce_product_ui.module-2567833-1.patch
+
+projects[commerce_backoffice][version] = 1.4
+projects[commerce_backoffice][subdir] = contrib
+
+projects[commerce_features][version] = 1.1
+projects[commerce_features][subdir] = contrib
+
+projects[rules][version] = 2.9
+projects[rules][subdir] = contrib
+
+projects[entityqueue][version] = 1.1
+projects[entityqueue][subdir] = contrib
+
+projects[auto_entityqueue][version] = 1.x-dev
+projects[auto_entityqueue][subdir] = contrib
+
+projects[addressfield_staticmap][version] = 1.0
+projects[addressfield_staticmap][subdir] = contrib
+
+projects[uuid_features][version] = 1.x-dev
+projects[uuid_features][subdir] = contrib
+
+projects[search_autocomplete][version] = 4.7
+projects[search_autocomplete][subdir] = contrib
+
+projects[radix_core][version] = 3.x-dev
+projects[radix_core][subdir] = contrib
+
+projects[radix_views][version] = 1.0
+projects[radix_views][subdir] = contrib
+
+projects[panels_everywhere][version] = 1.0-rc2
+projects[panels_everywhere][subdir] = contrib
+
+projects[imagecache_token][version] = 1.0-rc1
+projects[imagecache_token][subdir] = contrib
+
+projects[devel][version] = 1.5
+projects[devel][subdir] = contrib
+
+projects[field_slideshow][version] = 1.8
+projects[field_slideshow][subdir] = contrib
+projects[field_slideshow][patch][1366226] = http://drupal.org/files/field_slideshow-long-text-field-support-1366226-11.patch
+
+libraries[jquery.cycle][download][type] = get
+libraries[jquery.cycle][download][url] = http://malsup.com/jquery/cycle/release/jquery.cycle.zip?v2.99
+libraries[jquery.cycle][destination] = libraries
+
+; Restaurant Themes
+
+projects[radix][version] = 3.3
 projects[radix][type] = theme
+projects[radix][subdir] = contrib
 
-projects[restaurant_radix][version] = 1.0-rc2
-projects[restaurant_radix][type] = theme
-
-projects[restaurant_seven][version] = 1.0-rc2
-projects[restaurant_seven][type] = theme
-
-projects[sizzle][version] = 1.0-rc2
+projects[sizzle][version] = 1.0-rc4
 projects[sizzle][type] = theme
+projects[sizzle][subdir] = contrib

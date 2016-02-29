@@ -13,12 +13,13 @@ function restaurant_seo_metatag_export_default() {
   // Exported Metatag config instance: global.
   $config['global'] = array(
     'instance' => 'global',
+    'disabled' => FALSE,
     'config' => array(
       'title' => array(
         'value' => '[current-page:title] | [site:name]',
       ),
       'generator' => array(
-        'value' => 'Open Restaurant (http://open.restaurant)',
+        'value' => 'Drupal 7 (http://drupal.org)',
       ),
       'canonical' => array(
         'value' => '[current-page:url:absolute]',
@@ -32,6 +33,7 @@ function restaurant_seo_metatag_export_default() {
   // Exported Metatag config instance: global:403.
   $config['global:403'] = array(
     'instance' => 'global:403',
+    'disabled' => FALSE,
     'config' => array(
       'canonical' => array(
         'value' => '[site:url]',
@@ -45,6 +47,7 @@ function restaurant_seo_metatag_export_default() {
   // Exported Metatag config instance: global:404.
   $config['global:404'] = array(
     'instance' => 'global:404',
+    'disabled' => FALSE,
     'config' => array(
       'canonical' => array(
         'value' => '[site:url]',
@@ -58,6 +61,7 @@ function restaurant_seo_metatag_export_default() {
   // Exported Metatag config instance: global:frontpage.
   $config['global:frontpage'] = array(
     'instance' => 'global:frontpage',
+    'disabled' => FALSE,
     'config' => array(
       'title' => array(
         'value' => '[site:name]',
@@ -71,9 +75,24 @@ function restaurant_seo_metatag_export_default() {
     ),
   );
 
+  // Exported Metatag config instance: node.
+  $config['node'] = array(
+    'instance' => 'node',
+    'disabled' => FALSE,
+    'config' => array(
+      'title' => array(
+        'value' => '[node:title] | [site:name]',
+      ),
+      'description' => array(
+        'value' => '[node:summary]',
+      ),
+    ),
+  );
+
   // Exported Metatag config instance: taxonomy_term.
   $config['taxonomy_term'] = array(
     'instance' => 'taxonomy_term',
+    'disabled' => FALSE,
     'config' => array(
       'title' => array(
         'value' => '[term:name] | [site:name]',
@@ -87,6 +106,7 @@ function restaurant_seo_metatag_export_default() {
   // Exported Metatag config instance: user.
   $config['user'] = array(
     'instance' => 'user',
+    'disabled' => FALSE,
     'config' => array(
       'title' => array(
         'value' => '[user:name] | [site:name]',

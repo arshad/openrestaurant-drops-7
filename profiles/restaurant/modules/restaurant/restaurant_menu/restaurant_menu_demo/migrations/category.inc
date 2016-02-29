@@ -7,8 +7,10 @@
 // Migration class
 class RestaurantMenuMigrateCategoryMigration extends Migration {
 
-  public function __construct() {
+  public function __construct($arguments) {
+    $this->arguments = $arguments;
     parent::__construct();
+
     $this->data = drupal_get_path('module', 'restaurant_menu_demo') . '/data/categories.csv';
     $this->description = t('Import menu categories terms.');
     $this->source = new MigrateSourceCSV($this->data, $this->csvcolumns(), array('header_rows' => 1));
