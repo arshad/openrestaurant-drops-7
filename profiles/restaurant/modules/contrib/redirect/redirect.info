@@ -15,7 +15,10 @@ files[] = views/redirect_handler_field_redirect_link_edit.inc
 files[] = views/redirect_handler_field_redirect_link_delete.inc
 configure = admin/config/search/redirect/settings
 
-; Information added by drush on 2013-08-26
+
+; Information added by drush on 2016-03-10
 version = "7.x-1.0-rc1+6-dev"
+core = "7.x"
 project = "redirect"
-datestamp = "1377556349"
+datestamp = "1457590046"
+

@@ -6,7 +6,7 @@ drops_profile_dest="$HOME/Sites/box/www/openrestaurant-drops-7/profiles/restaura
 
 # Make sure the profile_root directory is available
 if [ ! -d ${profile_root} ]; then
-    echo profile_root="$HOME/Sites/box/www/openrestaurant/profiles/restaurant"
+    echo profile_root="$HOME/Sites/box/www/openrestaurant-drops-7/profiles/restaurant"
   fi
 
 echo "Starting drops update..."

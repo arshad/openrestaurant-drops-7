@@ -170,7 +170,7 @@ Drupal.navbar = Drupal.navbar || {
       // jQuery set.
       activeTray: null,
       // The orientation of the active tray.
-      orientation: 'vertical',
+      orientation: 'horizontal',
       // A tray is locked if a user toggled it to vertical. Otherwise a tray
       // will switch between vertical and horizontal orientation based on the
       // configured breakpoints. The locked state will be maintained across page
