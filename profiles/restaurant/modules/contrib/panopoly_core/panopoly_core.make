@@ -14,6 +14,7 @@ projects[panels][subdir] = contrib
 projects[panels][patch][2448825] = https://www.drupal.org/files/issues/panels-export-indentation-2448825-1.patch
 projects[panels][patch][2390803] = https://www.drupal.org/files/issues/panels-focus-add-content-tab-2390803-13.patch
 projects[panels][patch][1588212] = https://www.drupal.org/files/issues/panels-1588212-10.patch
+projects[panels][patch][2405733] = https://www.drupal.org/files/issues/panels-ipe-remove-debug-2405733-1.patch
 
 projects[panels_breadcrumbs][version] = 2.2
 projects[panels_breadcrumbs][subdir] = contrib
@@ -23,7 +24,7 @@ projects[panelizer][subdir] = contrib
 projects[panelizer][patch][1623536] = http://drupal.org/files/issues/array-to-object-on-update-1623536-26.patch
 projects[panelizer][patch][2416505] = http://www.drupal.org/files/issues/panelizer-search_api-2416505-3.patch
 
-projects[fieldable_panels_panes][version] = 1.8
+projects[fieldable_panels_panes][version] = 1.10
 projects[fieldable_panels_panes][subdir] = contrib
 
 projects[pm_existing_pages][version] = 1.4
@@ -85,7 +86,7 @@ projects[link][subdir] = contrib
 projects[apps][version] = 1.0
 projects[apps][subdir] = contrib
 
-projects[features][version] = 2.7
+projects[features][version] = 2.10
 projects[features][subdir] = contrib
 
 projects[strongarm][version] = 2.0

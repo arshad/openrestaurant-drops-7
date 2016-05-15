@@ -1,4 +1,10 @@
-Sizzle 7.x-1.0-rc3, 2016-02-28
+Sizzle 7.x-1.1, 2016-05-15
+--------------------
+- Replace commerce_price with menu_price
+- Add mobile settings
+- Fix price display as sup for menu
+
+Sizzle 7.x-1.0, 2016-02-28
 --------------------
 - Added CSS line missed from RC2 to RC3.
 - Update default browserSyncProxy.

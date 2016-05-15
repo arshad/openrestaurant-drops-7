@@ -124,16 +124,22 @@ function sizzle_preprocess_html(&$variables, $hook) {
 function sizzle_preprocess_page(&$variables) {
   $theme_path = drupal_get_path('theme', 'sizzle');
 
+  // Add mobile menu links.
+  $mobile_menu_links = theme_get_setting('mobile_menu_links');
+
   // Add a menu link.
-  $variables['menu_link'] = l(t('The Menu'), 'menus', array(
-    'attributes' => array(
-      'class' => array('btn'),
-    ),
-  ));
+  $variables['menu_link'] = '';
+  if (isset($mobile_menu_links['menu']) && $mobile_menu_links['menu'] !== 0) {
+    $variables['menu_link'] = l(t('The Menu'), 'menus', array(
+      'attributes' => array(
+        'class' => array('btn'),
+      ),
+    ));
+  }
 
   // Add a reservation link.
   $variables['reservation_link'] = '';
-  if (module_exists('restaurant_reservation')) {
+  if (isset($mobile_menu_links['reservation']) && $mobile_menu_links['reservation'] !== 0) {
     $variables['reservation_link'] = l(t('Book a Table'), 'reservation', array(
       'attributes' => array(
         'class' => array('btn'),

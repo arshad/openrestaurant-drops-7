@@ -39,3 +39,5 @@ settings[footer_text][value] = <div class="row"><div class="col-sm-5 col-sm-offs
 settings[footer_text][format] = panopoly_wysiwyg_text
 settings[copyright][value] = <div class="text--center"><h4>Follow us on</h4><a href="[config:yelp]"><i class="fa fa-yelp">&nbsp;</i></a> <a href="[config:twitter]"><i class="fa fa-twitter-square">&nbsp;</i></a> <a href="[config:facebook]"><i class="fa fa-facebook-square">&nbsp;</i></a> <a href="[config:google_plus]"><i class="fa fa-google-plus-square">&nbsp;</i></a><p class="margin--sm--top">@ 2015 Open Restaurant - Open Source Restaurant Software</p></div>
 settings[copyright][format] = panopoly_wysiwyg_text
+settings[mobile_menu_links][menu] = 1
+settings[mobile_menu_links][reservation] = 1

@@ -99,6 +99,26 @@ function sizzle_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => $copyright['value'],
   );
 
+  // Mobile.
+  $form['mobile'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Mobile'),
+    '#collapsible' => TRUE,
+    '#group' => 'default_theme_settings'
+  );
+
+  $mobile_menu_links = theme_get_setting('mobile_menu_links');
+  $form['mobile']['mobile_menu_links'] = array(
+    '#title' => t('Additional navigation links'),
+    '#description' => t('Select additional links to display for mobile navigation.'),
+    '#type' => 'checkboxes',
+    '#options' => array(
+      'menu' => t('Menu link'),
+      'reservation' => t('Reservation link'),
+    ),
+    '#default_value' => $mobile_menu_links,
+  );
+
   // Add a custom submit handler.
   $form['#submit'][] = 'sizzle_form_variable_realm_variable_theme_form_submit';
 

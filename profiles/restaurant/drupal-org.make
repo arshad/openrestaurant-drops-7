@@ -3,32 +3,32 @@ core = 7.x
 
 ; The Panopoly Foundation
 
-projects[panopoly_core][version] = 1.32
+projects[panopoly_core][version] = 1.35
 projects[panopoly_core][subdir] = contrib
 
-projects[panopoly_images][version] = 1.32
+projects[panopoly_images][version] = 1.35
 projects[panopoly_images][subdir] = contrib
 
-projects[panopoly_theme][version] = 1.32
+projects[panopoly_theme][version] = 1.35
 projects[panopoly_theme][subdir] = contrib
 projects[panopoly_theme][patch][2672738] = https://www.drupal.org/files/issues/panopoly-theme-remove-responsive-bartik-2672738-1.patch
 
-projects[panopoly_magic][version] = 1.32
+projects[panopoly_magic][version] = 1.35
 projects[panopoly_magic][subdir] = contrib
 
-projects[panopoly_widgets][version] = 1.32
+projects[panopoly_widgets][version] = 1.35
 projects[panopoly_widgets][subdir] = contrib
 
-projects[panopoly_admin][version] = 1.32
+projects[panopoly_admin][version] = 1.35
 projects[panopoly_admin][subdir] = contrib
 
-projects[panopoly_users][version] = 1.32
+projects[panopoly_users][version] = 1.35
 projects[panopoly_users][subdir] = contrib
 
-projects[panopoly_pages][version] = 1.32
+projects[panopoly_pages][version] = 1.35
 projects[panopoly_pages][subdir] = contrib
 
-projects[panopoly_wysiwyg][version] = 1.32
+projects[panopoly_wysiwyg][version] = 1.35
 projects[panopoly_wysiwyg][subdir] = contrib
 
 ; Panopoly Other
@@ -62,7 +62,7 @@ projects[eck][subdir] = contrib
 projects[variable][version] = 2.1
 projects[variable][subdir] = contrib
 
-projects[migrate][version] = 2.5
+projects[migrate][version] = 2.8
 projects[migrate][subdir] = contrib
 
 projects[migrate_extras][version] = 2.5
@@ -127,7 +127,7 @@ projects[eck][subdir] = contrib
 projects[inline_entity_form][version] = 1.6
 projects[inline_entity_form][subdir] = contrib
 
-projects[commerce][version] = 1.11
+projects[commerce][version] = 1.13
 projects[commerce][subdir] = contrib
 projects[commerce][patch][2567833] = https://www.drupal.org/files/issues/commerce-fatal-error-commerce_product_ui.module-2567833-1.patch
 
@@ -180,10 +180,10 @@ libraries[jquery.cycle][destination] = libraries
 
 ; Restaurant Themes
 
-projects[radix][version] = 3.3
+projects[radix][version] = 3.4
 projects[radix][type] = theme
 projects[radix][subdir] = contrib
 
-projects[sizzle][version] = 1.0
+projects[sizzle][version] = 1.1
 projects[sizzle][type] = theme
 projects[sizzle][subdir] = contrib

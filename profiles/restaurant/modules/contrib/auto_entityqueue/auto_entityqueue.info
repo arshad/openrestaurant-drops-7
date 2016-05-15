@@ -3,9 +3,9 @@ description = Automatically adds entities to entityqueues.
 package = Entityqueue
 core = 7.x
 dependencies[] = entityqueue
-; Information added by Drupal.org packaging script on 2015-07-29
+; Information added by Drupal.org packaging script on 2016-04-11
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "auto_entityqueue"
-datestamp = "1438180144"
+datestamp = "1460373840"
 
