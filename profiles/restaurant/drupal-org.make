@@ -80,7 +80,7 @@ projects[email][subdir] = contrib
 projects[auto_nodetitle][version] = 1.0
 projects[auto_nodetitle][subdir] = contrib
 
-projects[addressfield][version] = 1.0-beta5
+projects[addressfield][version] = 1.2
 projects[addressfield][subdir] = contrib
 
 projects[disqus][version] = 1.10
@@ -170,7 +170,7 @@ projects[imagecache_token][subdir] = contrib
 projects[devel][version] = 1.5
 projects[devel][subdir] = contrib
 
-projects[field_slideshow][version] = 1.8
+projects[field_slideshow][version] = 1.82
 projects[field_slideshow][subdir] = contrib
 projects[field_slideshow][patch][1366226] = http://drupal.org/files/field_slideshow-long-text-field-support-1366226-11.patch
 
@@ -179,10 +179,6 @@ libraries[jquery.cycle][download][url] = http://malsup.com/jquery/cycle/release/
 libraries[jquery.cycle][destination] = libraries
 
 ; Restaurant Themes
-
-projects[radix][version] = 3.4
-projects[radix][type] = theme
-projects[radix][subdir] = contrib
 
 projects[sizzle][version] = 1.1
 projects[sizzle][type] = theme
